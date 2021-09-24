@@ -1,4 +1,5 @@
 *.gz
 *.csv
+*.env
 test/
 .ipynb_checkpoints/
