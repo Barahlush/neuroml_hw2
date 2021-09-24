@@ -3,3 +3,4 @@
 *.env
 test/
 .ipynb_checkpoints/
+__*
