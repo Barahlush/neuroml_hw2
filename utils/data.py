@@ -1,7 +1,15 @@
 import torchio 
 import enum
 import numpy as np
+import pandas as pd
+import os
 from tqdm.notebook import tqdm
+import warnings
+from dotenv import load_dotenv
+import torch
+
+from torchio import AFFINE, DATA, PATH, TYPE, STEM
+
 """
     Code adapted from: https://github.com/fepegar/torchio#credits
 
@@ -31,6 +39,7 @@ GM = [1002, 1003, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013,
 
 LABELS = VENTRCL + BRN_STEM + HIPPOCMPS + AMYGDL + GM # all of interest
 
+load_dotenv()
 
 def prepare_aseg(targets):
     """
